@@ -1,6 +1,5 @@
 okta-flask-blog
-===============
-
+=============== 
 A simple Flask blog with user registration and login.
 
 
