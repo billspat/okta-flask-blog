@@ -3,7 +3,7 @@
 
 from os import environ
 
-from flask import Blueprint, g, redirect, url_for
+from flask import Blueprint, redirect, url_for
 from flask_oidc import OpenIDConnect
 from okta import UsersClient
 
