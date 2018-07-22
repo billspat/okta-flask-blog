@@ -57,7 +57,8 @@ def view_post(slug):
     if not post:
         abort(404)
 
-    post.author_name = g.user.profile.firstName + " " + g.user.profile.lastName
+    u = okta_client.get_user(post.author_id)
+    post.author_name = u.profile.firstName + " " + u.profile.lastName
 
     return render_template("blog/post.html", post=post)
 
