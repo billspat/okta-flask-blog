@@ -15,7 +15,7 @@ Purpose
 -------
 
 This example app showcases how to build simple Flask web apps. It demonstrates
-how to work with databases and handler user management (registration, login,
+how to work with databases and handle user management (registration, login,
 etc.) using OpenID Connect and `Okta <https://developer.okta.com>`_.
 
 I wrote this to showcase how to get stuff working in a simple way.
@@ -23,7 +23,7 @@ I wrote this to showcase how to get stuff working in a simple way.
 .. note::
 
   I wrote a blog post showcasing how this example app was built. You can view it
-  here: TODO
+  here: https://developer.okta.com/blog/2018/07/23/build-a-simple-crud-app-with-flask-and-python
 
 
 Installation
