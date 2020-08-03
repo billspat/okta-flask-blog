@@ -5,3 +5,18 @@ dist
 *.sqlite
 client_secrets.json
 
+__pycache__/*
+blog/__pycache__/*
+
+*.py[cod]
+*$py.class
+
+# Editors
+.vscode/
+.idea/
+
+# Vagrant
+.vagrant/
+
+# Mac/OSX
+.DS_Store
