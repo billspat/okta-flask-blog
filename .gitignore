@@ -3,3 +3,5 @@ dist
 *.json
 *.egg-info
 *.sqlite
+client_secrets.json
+
