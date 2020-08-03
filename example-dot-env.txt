@@ -1,0 +1,4 @@
+export FLASK_APP=blog
+export SECRET_KEY=RANDOM_STRING_HERE!
+export OKTA_ORG_URL={{your oka org from the dashboard}}
+export OKTA_AUTH_TOKEN={{okta auth token for this app (see blog post)}}
