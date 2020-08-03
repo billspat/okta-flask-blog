@@ -10,6 +10,9 @@ from flask import Flask, g, render_template
 
 from . import auth, db, blog
 
+from dotenv import load_dotenv
+load_dotenv()
+
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_mapping(
