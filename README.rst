@@ -105,11 +105,12 @@ secure your sessions (cookies). Then set the other two Okta variables
 appropriately.
 
 
-Next, initialize the database.  You must have the dependencies installed for this step to run
+Next, initialize the database.  You must have the dependencies installed for this step to run (or env activated)
+
 
 .. code-block:: console
 
-    source .env; flask run
+    flask init-db
 
 
 If you have flask installed

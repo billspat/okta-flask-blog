@@ -5,7 +5,7 @@ dist
 *.sqlite
 client_secrets.json
 
-__pycache__/*
+__pycache__/*   
 blog/__pycache__/*
 
 *.py[cod]

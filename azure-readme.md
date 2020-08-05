@@ -64,5 +64,5 @@ az webapp up --sku D1 -g <your_resource_group> -n <app-name>
 for example: 
 
 ```bash
-az webapp up --sku D1 -g ads-billspat-testing-rg -n ads-oktablogtest.azurewebsites.net
+az webapp up --sku D1 -g ads-billspat-testing-rg -n ads-oktablogtest
 ```
