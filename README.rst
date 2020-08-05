@@ -6,10 +6,9 @@ A simple Flask blog with user registration and login.
 Meta
 ----
 
-- Author: Randall Degges
-- Email: r@rdegges.com
-- Site: https://www.rdegges.com
-
+- forked from Randall Degges
+- see original blog post https://developer.okta.com/blog/2018/07/23/build-a-simple-crud-app-with-flask-and-python
+- slight modifications for Azure/Python
 
 Purpose
 -------
@@ -17,13 +16,6 @@ Purpose
 This example app showcases how to build simple Flask web apps. It demonstrates
 how to work with databases and handle user management (registration, login,
 etc.) using OpenID Connect and `Okta <https://developer.okta.com>`_.
-
-I wrote this to showcase how to get stuff working in a simple way.
-
-.. note::
-
-  I wrote a blog post showcasing how this example app was built. You can view it
-  here: https://developer.okta.com/blog/2018/07/23/build-a-simple-crud-app-with-flask-and-python
 
 
 Installation
@@ -34,7 +26,7 @@ then install the project dependencies by running:
 
 .. code-block:: console
 
-    $ pip install -e .
+    $ pip install -r requirements.txt
 
 This will install all the project dependencies.
 
@@ -80,6 +72,20 @@ Next, define some necessary environment variables.
     export SECRET_KEY={{ RANDOM_STRING_HERE }}
     export OKTA_ORG_URL={{ OKTA_ORG_URL }}
     export OKTA_AUTH_TOKEN={{ OKTA_AUTH_TOKEN }}
+    # optional
+    FLASK_ENV=development
+    
+This example also uses python dot-env, so you may create a file ` .env` with the following contents
+
+.. code-block:: console
+
+    # contents of .env file (for MacOS/Linux)
+    FLASK_APP=blog
+    FLASK_ENV=development
+    SECRET_KEY={{ RANDOM_STRING_HERE }}
+    OKTA_ORG_URL={{ OKTA_ORG_URL }}
+    OKTA_AUTH_TOKEN={{ OKTA_AUTH_TOKEN }}
+
 
 Set the ``SECRET_KEY`` variable to a long, random string. This will be used to
 secure your sessions (cookies). Then set the other two Okta variables
@@ -92,3 +98,9 @@ Next, run the web server.
     flask run
 
 Finally, go visit http://localhost:5000 and explore the site!
+
+To use Azure App Service you must have one of a handful of possible application entry points for the automatic platform detection scripts to work (see docs for Oryx), so you may have to adjust the FLASK_APP var
+
+.. code-block:: console
+
+    FLASK_APP=app.py
