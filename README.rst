@@ -32,12 +32,6 @@ then install the project dependencies by running:
 
     $ pip install -r requirements.txt
 
-or 
-
-.. code-block:: console
-
-    $ pip install -r requirements.txt
-
 
 Running the App
 ---------------
